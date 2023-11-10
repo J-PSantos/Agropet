@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Sarala:wght@400;700&=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+:root {
+    --cor-gradient:linear-gradient(68.15deg, #2F2325 16.62%, #8E5D52 85.61%);
+    --cor-Rgba:rgba(236, 214, 196, 0.53);
+    --cor-rgb:rgba(0, 0, 0, 0.25);
+    --cor-a:#FFF2E7;
+    --cor-v:#d63a25;
+    --cor-ab:#ECD6C4;
+    --cor-r:#2F2325;
+    --cor-abc:#FFF2EF;
+    }
+body {
+    font-size: 100%;
+    background: var(--cor-gradient);
+}
+.navgation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    padding: 18px 40px;
+    box-shadow: 0 0.1rem 0.5rem var(--cor-a);
+    width: 100%;
+    transition: all 0.5s;
+}
+.navgation .logo {
+    color: var(--cor-v);
+    font-size: 4rem;
+    font-weight: 600;
+}
+.logo span {
+    color: var(--cor-r);
+}
+.navgation ul {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    list-style: none;
+}
+.navgation ul li a {
+    color: var(--cor-v);
+    font-family: 'Sarala', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+}
+.navgation ul li a:hover {
+    color: var(--cor-Rgba);
+}
+.navgation i {
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+.menu {
+    cursor: pointer;
+    display: none;
+}
+.menu .bar {
+    background: var(--cor-r);
+    display: block;
+    margin: 5px auto;
+    width: 28px;
+    height: 3px;
+    transition: all 0.3s;
+}
+.menu .bar:nth-child(1),
+.menu .bar:nth-child(3) {
+    background: var(--cor-v);
+}
+.home {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 10%;
+    width: 100%;
+}
+.home-text {
+    max-width: 30rem;
+}
+.home-text .text-h1 {
+    margin-top: 40px;
+    color: var(--cor-a);
+    font-family: 'Righteous', cursive;
+    font-weight: 400;
+    font-size: 64px;
+}
+.home-text .text-h2 {
+    margin-top: 20px;
+    color: var(--cor-ab);
+    font-family: 'Sarala', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+}
+.button {
+    background-color: var(--cor-ab);
+    width: 180px;
+    height: 60px;
+    margin-top: 20px;
+    border: none;
+    box-shadow: 4px 5px 4px var(--cor-Rgba);
+    border-radius: 20px;
+    font-family: 'Sarala', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    cursor: pointer;
+    color: var(--cor-r);
+}
+.button:hover {
+    background-color: var(--cor-Rgba);
+    transition: all 0.5s;
+}
+.home-img {
+    display: flex;
+    margin-top: 160px;
+    height: 360px;
+}
+.home-img img {
+    border-radius: 16px;
+}
+.home-1 {
+    display: flex;flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    margin-top: 48px;
+}
+.text-h3 {
+    border-top: 3px solid var(--cor-Rgba);
+    padding-top: 48px;
+    font-family: 'Sarala', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    margin-bottom: 16px;
+    color: var(--cor-abc);
+}
+.text-p {
+    font-family: 'Sarala', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    color: var(--cor-ab);
+}
+.footer {
+    margin-top: 32px;
+    width: 100%;
+    height: 80px;
+    border-top: 3px solid var(--cor-Rgba);
+}
+.footer p {
+    text-align: center;
+    font-size: 20px;
+    margin: auto;
+    padding-top: 30px;
+    color: var(--cor-Rgba);
+}
+/*Responsivo*/
+@media (max-width: 800px) {
+    .navgation {
+        padding: 18px 20px;
+    }
+    .menu {
+        display: block;
+    }
+    .menu.ativo .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    .menu.ativo .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .menu.ativo .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    .nav-menu {
+        position: fixed;
+        right: -120%;
+        top: 0px;
+        width: 100%;
+        height: 60%;
+        flex-direction: column;
+        background: var(--cor-a);
+        gap: -10px;
+        transition: all 2s;
+    }
+    .nav-menu.ativo {
+        right: 0;
+    }
+    .nav-item {
+        margin: 16px 0;
+    }
+    /*main*/
+    .home {
+        padding: 100px 2%;
+        flex-direction: column;
+        text-align: center;
+        overflow: hidden;
+        gap: 5rem;
+    }
+    .home-img {
+        position: relative;
+        margin-top: -40px;
+    }
+    .home-img img {
+        width: 360px;
+        z-index: -1;
+    }
+    .text-h3 {
+        text-align: center;
+        font-size: 20px;
+        margin-top: -100px;
+    }
+    .footer p {
+        font-size: 12px;
+    }
+    .footer p {
+        font-size: 18px;
+    }
+}
